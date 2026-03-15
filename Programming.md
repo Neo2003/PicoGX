@@ -1,6 +1,6 @@
 # Programming for the PicoGX
 
-The PicoGX provides some fonctionalities not available to regular cartridges:  
+The PicoGX provides some functionalities not available to regular cartridges:  
 + More than 512kb cartridges  
 + High scores or anything else save and restore (In near future)  
 
@@ -21,20 +21,20 @@ This code (Z80 assembly) will read something at address 0x133C, then address 0x2
 
 ## Communicating with PicoGX
 
-The PicoGX will detected the 2 addresses and the command if these addresses are read one after the other with nothing in between.  
-This is only possible if the code is not in the cartridge but in RAM. If the code is in the cartridge, code fetching will occur in between and the PicoGX will not see proper concecutives addresses.  
+The PicoGX will detect the 2 addresses and the command if these addresses are read one after the other with nothing in between.  
+This is only possible if the code is not in the cartridge but in RAM. If the code is in the cartridge, code fetching will occur in between and the PicoGX will not see proper consecutive addresses.  
 
 ## Accessing more than 512kb
 
-When the PicoGX detects a cartridge more than 512KB in size, it will lookup for reserved addresses in the Bank 0 of the cartridge.  
-![plot](./Pictures/Warning.jpg) This is always bank 0, whatever mapping you apply using RMR2, so cartridge address from 0x000 et 0x3FFF.  
-Detection is based on all the 14 bits set ignoring the 2 least weighted bits.
+When the PicoGX detects a cartridge more than 512kb in size, it will lookup for reserved addresses in the Bank 0 of the cartridge.  
+![plot](./Pictures/Warning.jpg) This is always bank 0, whatever mapping you apply using RMR2, so cartridge address from 0x000 to 0x3FFF.  
+Detection is based on all the 19 bits set ignoring the 2 least weighted bits.
 ![plot](./Pictures/ExtraSpaceDetection.png)  
 Then these 2 least weighted bits are used to select the bloc of 512kb to use:  
-+ 11: Use base bloc of 512KB (Default launched bloc).  
++ 11: Use base bloc of 512kb (Default launched bloc).  
 + 10: Use the second 512kb bloc (this is complete flip, the original loaded code is not accessible).  
 + 01: Use the third and last 512kb bloc.
-+ 00: DO NOT USE! There is not enough flash space in the PicoGX for 2MB cartridges.  
++ 00: DO NOT USE! There is not enough flash space in the PicoGX for 2mb cartridges.  
 
 For exemple this code will ask the PicoGX to swap the cartridge content with the 2nd 512kb bloc:
 ```
