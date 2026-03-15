@@ -31,3 +31,14 @@ The PicoGX PCB is a Raspberry Pi Pico 2 model RP2354B using ENIG surface finish 
 The box is printed in automotive LEDO 6060 resin.  
 The sticker is profesionnaly made of vinyl.  
 
+## Greatings
+
+Many thanks to Edouard BERGE for his [RASM complier](https://github.com/EdouardBERGE/rasm) I used to make the CPC roms and also for his big help with the selection cartridge.  
+
+Many thanks to BDCiron who is working on an alternative selection cartridge using ASIC acceleration, this firmware will be released in the future.  
+
+Many thank to FreddyV (the creator of the [PicoMEM](https://github.com/FreddyVRetro/ISA-PicoMEM)) for the help with Pico power supply, for components selection and BOM creation for the PicoGX.  
+
+## Programming for the PicoGX
+
+Follow [the link to this page](./Programming.md) to learn how to use 1.5MB cartridge and more to come.  
