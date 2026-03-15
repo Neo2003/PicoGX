@@ -19,7 +19,8 @@ Featuring the same package form factor and size as original cartridges, it fits 
 
 ## Connectivity
 
-![plot](./Pictures/PicoGX_top.jpg)
+![plot](./Pictures/PicoGX_top.jpg)  
+_The picture was taken at prototype time, the cartridge is now white and sticker suites better_
 
 + MicroSD slot for cartridges storage  
 + USB-C plug to connect to a PC as adapter or to update the firmware  
@@ -27,7 +28,7 @@ Featuring the same package form factor and size as original cartridges, it fits 
 
 ## Construction
 
-The PicoGX PCB is a Raspberry Pi Pico 2 model RP2354B using ENIG surface finish and gold plated contacts.  
+The PCB is based on a Raspberry Pi Pico 2 model RP2354B and is using ENIG surface finish and gold plated contacts.  
 The box is printed in automotive LEDO 6060 resin.  
 The sticker is profesionnally made of vinyl.  
 
