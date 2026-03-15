@@ -33,7 +33,7 @@ The sticker is profesionnaly made of vinyl.
 
 ## Greatings
 
-Many thanks to Edouard BERGE for his [RASM complier](https://github.com/EdouardBERGE/rasm) I used to make the CPC roms and also for his big help with the selection cartridge.  
+Many thanks to Edouard BERGE for his [RASM compiler](https://github.com/EdouardBERGE/rasm) I used to make the CPC roms and also for his big help with the selection cartridge.  
 
 Many thanks to BDCiron who is working on an alternative selection cartridge using ASIC acceleration, this firmware will be released in the future.  
 
