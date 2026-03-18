@@ -30,11 +30,12 @@ When the PicoGX detects a cartridge more than 512kb in size, it will lookup for 
 ![plot](./Pictures/Warning.jpg) This is always bank 0, whatever mapping you apply using RMR2, so cartridge address from 0x000 to 0x3FFF.  
 Detection is based on all the 19 bits set ignoring the 2 least weighted bits.
 ![plot](./Pictures/ExtraSpaceDetection.png)  
+First 5 bits must be 0 then 12 bits must be 1.  
 Then these 2 least weighted bits are used to select the bloc of 512kb to use:  
 + 11: Use base bloc of 512kb (Default launched bloc).  
 + 10: Use the second 512kb bloc (this is complete flip, the original loaded code is not accessible).  
 + 01: Use the third and last 512kb bloc.
-+ 00: DO NOT USE! There is not enough flash space in the PicoGX for 2mb cartridges.  
++ 00: DO NOT USE! There is not enough flash space in the PicoGX for 2mb cartridges, So no change will happen.  
 
 For exemple this code will ask the PicoGX to swap the cartridge content with the 2nd 512kb bloc:
 ```
