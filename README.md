@@ -24,7 +24,7 @@ _The picture was taken at prototype time, the cartridge is now white and sticker
 
 + MicroSD slot for cartridges storage  
 + USB-C plug to connect to a PC as adapter or to update the firmware  
-+ Hole hidding a button for firware update  
++ Hole hidding a button for firmware update  
 
 ## Construction
 

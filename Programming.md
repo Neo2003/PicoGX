@@ -30,7 +30,7 @@ When the PicoGX detects a cartridge more than 512kb in size, it will lookup for 
 ![plot](./Pictures/Warning.jpg) This is always bank 0, whatever mapping you apply using RMR2, so cartridge address from 0x000 to 0x3FFF.  
 Detection is based on all the 19 bits set ignoring the 2 least weighted bits.
 ![plot](./Pictures/ExtraSpaceDetection.png)  
-First 5 bits must be 0 then 12 bits must be 1.  
+First 5 bits must be 0 (rom 0), then 12 bits must be 1 (0x3FFC).  
 Then these 2 least weighted bits are used to select the bloc of 512kb to use:  
 + 11: Use base bloc of 512kb (Default launched bloc).  
 + 10: Use the second 512kb bloc (this is complete flip, the original loaded code is not accessible).  
@@ -47,6 +47,9 @@ Run this code from memory and not from the cartridge, unless you prepared the ca
 The switch is instant, the next read will be from the 2nd bloc. Any RMR or RMR2 mapping still applies, the machine is not aware of this change.   
    
 This obviously only works if the cartridge is more than 512bk in size. The pico will do nothing if the cartridge is less or equal to 512kb and just return the data stored as this address as usual.  
+
+![plot](./Pictures/1.5MbTest.jpg)  
+_Test by Edouard BERGE working on the PicoGX_ 
 
 ## Saving progress, high score or anything else
 
