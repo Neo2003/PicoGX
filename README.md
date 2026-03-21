@@ -32,6 +32,14 @@ The PCB is based on a Raspberry Pi Pico 2 model RP2354B and is using ENIG surfac
 The box is printed in automotive LEDO 6060 resin.  
 The sticker is profesionnally made of vinyl.  
 
+## Some custom cartridges
+
+I made 2 cartridges  
++ Basic 1.1 f3 from CPC 6128 (works on 6128+, will not on 464+ or GX4000 due to missing floppy controler)  
++ Basic 1.1 f4 from "Burnin'Rubber + Basic" cartridge with Burnin and menu removed (works on all but useless on GX4000)  
+
+You will find them for French keyboard in the Cartridges folder, other languages will come soon  
+
 ## Greetings
 
 Many thanks to Edouard BERGE for his [RASM compiler](https://github.com/EdouardBERGE/rasm) I used to make the CPC roms and also for his big help with the selection cartridge.  
