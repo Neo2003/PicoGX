@@ -26,6 +26,16 @@ _The picture was taken at prototype time, the cartridge is now white and sticker
 + USB-C plug to connect to a PC as adapter or to update the firmware  
 + Hole hidding a button for firmware update  
 
+## Where to buy it
+
+In UK: [Flame Lily shop](https://shop.flamelily.co.uk/picogx)  
+In France: The shop is not ready yet to sell it  
+
+## Limitations as of 2026, March 25th
+
+Be aware that the PicoGX currently does display only 80 items at a time. In any path, it will limit the number of folders+files displayed to 80. I will tune this based on feedbacks.  
+File name without extension need to be 40 characters max, if greater than that the PicoGX will fail to load it. I will find a way to fix this, just allow me some time.  
+
 ## Construction
 
 The PCB is based on a Raspberry Pi Pico 2 model RP2354B and is using ENIG surface finish and gold plated contacts.  
