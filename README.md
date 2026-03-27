@@ -28,13 +28,15 @@ _The picture was taken at prototype time, the cartridge is now white and sticker
 
 ## Where to buy it
 
-In UK: [Flame Lily shop](https://shop.flamelily.co.uk/picogx)  
+In UK: [FlameLily shop](https://shop.flamelily.co.uk/picogx)  
 In France: The shop is not ready yet to sell it  
 
-## Limitations as of 2026, March 25th
+## Updating the firmware
 
-Be aware that the PicoGX currently does display only 80 items at a time. In any path, it will limit the number of folders+files displayed to 80. I will tune this based on feedbacks.  
-File name without extension need to be 40 characters max, if greater than that the PicoGX will fail to load it. I will find a way to fix this, just allow me some time.  
+Firmware is evolving based on users feedback. The firmware version is displayed on top right of the CPC screen, you can compare with the latest release, check the "Releases" on the right of this page.  
+To update the PicoGX firmware, get the latest .uf2 file, connect the USB-C port of the pico with a cable, push the button hidden 5mm under the hole and keep it pushed while you plug the other end of the cable to a PC.  
+Then release the button when the PC makes a mounting sound. A USB disk drive called "RP2350" will mount. Drag & drop the .uf2 file in this folder. 
+When flash is complete (it will take ~2 seconds), the folder disappears.
 
 ## Construction
 
