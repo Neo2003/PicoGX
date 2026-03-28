@@ -36,7 +36,10 @@ In France: The shop is not ready yet to sell it
 Firmware is evolving based on users feedback. The firmware version is displayed on top right of the CPC screen, you can compare with the latest release, check the "Releases" on the right of this page.  
 To update the PicoGX firmware, get the latest .uf2 file, connect the USB-C port of the pico with a cable, push the button hidden 5mm under the hole and keep it pushed while you plug the other end of the cable to a PC.  
 Then release the button when the PC makes a mounting sound. A USB disk drive called "RP2350" will mount. Drag & drop the .uf2 file in this folder. 
-When flash is complete (it will take ~2 seconds), the folder disappears.
+When flash is complete (it will take ~2 seconds), the folder disappears.  
+
+To help pressing the button, I made a pin. If you have a 3D printer, print it.  
+You can find it in 3Dpin folder.  
 
 ## Construction
 
