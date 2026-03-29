@@ -80,7 +80,7 @@ Put the following content:
     Text=26
 
 Lines beginning with `#` are comments and ignored by the PicoGX.  
-Check this [Color Code page](./ColorTable.html) to know which values to put for colors.  
+Check this <a href="https://neo2003.github.io/PicoGX/ColorTable.html" target="_blank">Color Code page</a> to know which values to put for colors.  
 The PicoGX will recognize INKR values prefixed with a `#`, this is an hexadecimal number from #40 to #5F, not all values in between are valid. The PicoGX will check validity and not change colors if a value in invalid.  
 It will recognize a decimal number if no `#` is present and will accept values from 0 to 26 which are Amstrad BASIC color numbers.   
 Note that colors won't be applied if both colors are same, even if one is written with INKR value and the other one with BASIC color number.  
