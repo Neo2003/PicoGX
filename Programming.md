@@ -1,3 +1,30 @@
+# Programming with the PicoGX
+
+The PicoGX with firmware 1.0.4 and above has a developer mode. This mode consists of defining a cartridge that auto-flashes and auto-launches. This means that each time the Asmtrad is powered on, the defined cartridge is read from the SD, flashed in the Pico and launched without any menu displayed.  
+
+This allow developers to test new released of their development.  
+
+**How to proceed:**  
+Edit or create the configuration file named `PicoGX.cfg` on the root of the SD  
+
+    # Dangerous option for developers only. The PicoGX will auto-load and flash this cartridge without asking
+    # The cartridge is not remembered and at start the cartridge will always be flashed if changed or not
+    [Special]
+    AutoFlash=Dev/MyGameLatest.cpr
+
+Lines beginning with `#` are comments and ignored by the PicoGX.  
+In `[Special]` section, the entry `AutoFlash` supports folders. In this exemple the folder `Dev` was used. Use `/` characters for folders, **not** Microsoft `\`.  
+The cartridge named `MyGameLatest.cpr` will be auto-loaded and launched.  
+
+**Usage:**  
+
+0) Set the PicoGX.cfg file and connect a USB cable to the PicoGX
+1) Connect the USB cable to your PC, this will mount the SD as drive, copy your updated cartridge to the SD
+2) Unplug the USB cable from the PC
+3) Start the Amstrad and the cartridge will auto launch, test your release
+4) Power off the Amstrad
+5) Goto 1
+
 # Programming for the PicoGX
 
 The PicoGX provides some functionalities not available to regular cartridges:  
@@ -54,3 +81,4 @@ _Test by Edouard BERGE working on the PicoGX_
 ## Saving progress, high score or anything else
 
 ```To be written and implemented.```
+
