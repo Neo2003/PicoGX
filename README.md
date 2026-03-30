@@ -79,6 +79,8 @@ Put the following content:
     Background=#54
     Text=26
 
+**Note: PicoGX has been developed on a linux PC, so file ending is Unix only, I will add windows file ending in next release**
+
 Lines beginning with `#` are comments and ignored by the PicoGX.  
 Check this <a href="https://neo2003.github.io/PicoGX/ColorTable.html" target="_blank">Color Code page</a> to know which values to put for colors.  
 The PicoGX will recognize INKR values prefixed with a `#`, this is an hexadecimal number from #40 to #5F, not all values in between are valid. The PicoGX will check validity and not change colors if a value in invalid.  
