@@ -80,5 +80,71 @@ _Test by Edouard BERGE working on the PicoGX_
 
 ## Saving progress, high score or anything else
 
-```To be written and implemented.```
+With firmware 1.0.5 and above, games and applications written for it can save game progress, state, achievements... etc  
+There is 16kb of space per software. The save name is based on the CPR name, .CPR replaced by .SAV, and stored in the "saves" folder on the SD Card.  
+
+This folder will stay hidden from the Selection Menu since there is no .BIN or .CPR files inside.  
+
+Each time a cpr is launched, the save is created in the pico memory and corresponding .SAV file loaded from the SD card if exists.  
+If the save stays unused, it will not been saved on the SD card. It is saved when the `write` command is ended by a `stop` command.
+
+### Writing to the save
+
+To access this memory for write, the PicoGX sequence is required, then you send the commande `write`.  
+Bank 0 must be activated for this to work, and all this code must run from the Amstrad memory  
+
+    Contact_Addr1 	EQU #133C
+    Contact_Addr2 	EQU #25C4
+
+    ld bc,6 ; write
+	ld a,(Contact_Addr1)
+	ld a,(Contact_Addr2)
+	ld a,(bc) ; command
+
+Then any read to bank 0 will act as a write to the save. The write is sequencial and starts from the beginning of the save.  
+This code for exemple will write 0x25, 0x25, 0x25, x025, 0xAA in the save file.  
+
+	ld bc,#25
+	ld a,(bc) ; save it
+	ld bc,#25
+	ld a,(bc) ; save it
+	ld bc,#25
+	ld a,(bc) ; save it
+	ld bc,#25
+	ld a,(bc) ; save it
+	ld bc,#AA
+	ld a,(bc) ; save it
+
+To  stop the save and have back the content of Bank 0, run this stop command:  
+
+	ld bc,7 ; stop
+	ld a,(Contact_Addr1)
+	ld a,(Contact_Addr2)
+	ld a,(bc) ; command
+
+![plot](./Pictures/Warning.jpg) Each time the save is open for write, it restarts at the beginning.  
+As soon as the write is ended by the `stop` command, the content will be saved to the SD card.  
+
+### Reading the save
+
+Read access is simplier and provides random access to the save.   
+Open the save as read:  
+
+	ld bc,5 ; read
+	ld a,(Contact_Addr1)
+	ld a,(Contact_Addr2)
+	ld a,(bc) ; command
+
+The Bank 0 is hidden and the content of the save is presented instead.  
+This code will read byte located at the address 0x258 of the save:  
+
+	ld lh,#258
+	ld a,(hl)
+
+To stop reading and get back Bank 0, it's the same command as for write:  
+
+	ld bc,7 ; stop
+	ld a,(Contact_Addr1)
+	ld a,(Contact_Addr2)
+	ld a,(bc) ; command
 

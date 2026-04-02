@@ -79,7 +79,7 @@ Put the following content:
     Background=#54
     Text=26
 
-**Note: PicoGX has been developed on a linux PC, so file ending is Unix only, I will add windows file ending in next release**
+With firmware 1.0.5, now supports Windows file ending and missing last return.  
 
 Lines beginning with `#` are comments and ignored by the PicoGX.  
 Check this <a href="https://neo2003.github.io/PicoGX/ColorTable.html" target="_blank">Color Code page</a> to know which values to put for colors.  
@@ -89,16 +89,21 @@ Note that colors won't be applied if both colors are same, even if one is writte
 
 ## Some custom cartridges
 
-I made 3 cartridges  
-+ [Basic 1.1 f3 French](./Cartridges/Basic%206128%20Fr.cpr) from CPC 6128 (works on 6128+, will not on 464+ or GX4000 due to missing floppy controler)  
-+ [Basic 1.1 f4 French](./Cartridges/Basic%20Plus%20Fr.cpr) from "Burnin'Rubber + Basic" cartridge with Burnin and menu removed (works on all but useless on GX4000)  
-+ [Basic 1.1 v4 English](./Cartridges/Basic%20Plus%20En.cpr) from "Burnin'Rubber + Basic" cartridge with Burnin and menu removed (works on all but useless on GX4000)  
+I made few cartridges  
++ [Basic 1.1 f3 French](./Cartridges/Basic%206128%20Fr.cpr) from CPC 6128  
++ [Basic 1.1 f3 French Pipe](./Cartridges/Basic%206128%20Fr%20Pipe.cpr) from CPC 6128 and modified to have pipe at proper place and inactive ù    
++ [Basic 1.1 v3 English](./Cartridges/Basic%206128%20En.cpr) from CPC 6128  
++ [Basic 1.1 f4 French](./Cartridges/Basic%20Plus%20Fr.cpr) from "Burnin'Rubber + Basic" cartridge  
++ [Basic 1.1 v4 English](./Cartridges/Basic%20Plus%20En.cpr) from "Burnin'Rubber + Basic" cartridge  
 
-You will find them in the Cartridges folder, other languages will come soon.  
+Basic from 6128 works only with 6128 Plus, **will not work** with 464 Plus or GX4000 due to the missing floppy controler.  
+Basic from Plus works with all, but is useless on GX4000. Burnin' Rubber and menu were removed  
+
+You can also find them by browsing the Cartridges folder, other languages will come soon.  
 
 ## Programming for or with the PicoGX
 
-Follow [the link to this page](./Programming.md) to learn how to use 1.5MB cartridges and develop for or with the PicoGX.  
+Follow [the link to this page](./Programming.md) to learn how to use 1.5MB cartridges, have save and develop for or with the PicoGX.  
 
 ## Games
 
