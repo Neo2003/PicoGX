@@ -90,11 +90,11 @@ Note that colors won't be applied if both colors are same, even if one is writte
 ## Some custom cartridges
 
 I made few cartridges  
-+ [Basic 1.1 f3 French](./Cartridges/Basic%206128%20Fr.cpr) from CPC 6128  
-+ [Basic 1.1 f3 French Pipe](./Cartridges/Basic%206128%20Fr%20Pipe.cpr) from CPC 6128 and modified to have pipe at proper place and inactive ù    
-+ [Basic 1.1 v3 English](./Cartridges/Basic%206128%20En.cpr) from CPC 6128  
-+ [Basic 1.1 f4 French](./Cartridges/Basic%20Plus%20Fr.cpr) from "Burnin'Rubber + Basic" cartridge  
-+ [Basic 1.1 v4 English](./Cartridges/Basic%20Plus%20En.cpr) from "Burnin'Rubber + Basic" cartridge  
++ [Basic 1.1 f3 French](https://neo2003.github.io/PicoGX/Cartridges/Basic%206128%20Fr.cpr) from CPC 6128  
++ [Basic 1.1 f3 French Pipe](https://neo2003.github.io/PicoGX/Cartridges/Basic%206128%20Fr%20Pipe.cpr) from CPC 6128 and modified to have pipe at proper place and inactive ù    
++ [Basic 1.1 v3 English](https://neo2003.github.io/PicoGX/Cartridges/Basic%206128%20En.cpr) from CPC 6128  
++ [Basic 1.1 f4 French](https://neo2003.github.io/PicoGX/Cartridges/Basic%20Plus%20Fr.cpr) from "Burnin'Rubber + Basic" cartridge  
++ [Basic 1.1 v4 English](https://neo2003.github.io/PicoGX/Cartridges/Basic%20Plus%20En.cpr) from "Burnin'Rubber + Basic" cartridge  
 
 Basic from 6128 works only with 6128 Plus, **will not work** with 464 Plus or GX4000 due to the missing floppy controler.  
 Basic from Plus works with all, but is useless on GX4000. Burnin' Rubber and menu were removed  
