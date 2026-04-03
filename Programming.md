@@ -29,7 +29,7 @@ The cartridge named `MyGameLatest.cpr` will be auto-loaded and launched.
 
 The PicoGX provides some functionalities not available to regular cartridges:  
 + More than 512kb cartridges  
-+ High scores or anything else save and restore (In near future)  
++ High scores or anything else save and restore   
 
 ## How communication between the machine and the pico works
 

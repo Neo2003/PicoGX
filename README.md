@@ -16,6 +16,7 @@ Featuring the same package form factor and size as original cartridges, it fits 
 + Last loaded cartridge is always on top of the list with inverted colors for fast launch  
 + When connected with the USB-C port to a PC, act as an adapter and mount the SD as disk  
 + Supports future games/demos up to 1.5Mb in size  
++ Supports save and restore scrores or achievements or other things  
 
 ## Connectivity
 
