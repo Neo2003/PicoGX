@@ -18,6 +18,8 @@ Featuring the same package form factor and size as original cartridges, it fits 
 + Supports future games/demos up to 1.5Mb in size  
 + Supports save and restore scrores or achievements or other things  
 
+Firmware 1.0.6 brings improvements to the interface, check the release change-log.  
+
 ## Connectivity
 
 ![plot](./Pictures/PicoGX_top.jpg)  
@@ -59,7 +61,7 @@ The SD can be in any of the following formats:
 - ExFat - My preference
 - Ext2
 
-There is no need of a 1 gb reserved space in the begining of the SD card, this will even make the SD card not working in some cases.  
+There is no need of a 1 mb reserved space in the begining of the SD card, this will even make the SD card not working in some cases.  
 
 Organise cartridges in folders and sub-folders since there is more than 1000 games available in this format and the PicoGX supports only 260 files + sub-folders per folder (firmware 1.0.3 and above).  
 The PicoGX will display only folders with one or more CPR or BIN file inside at any depth.  
