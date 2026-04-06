@@ -112,10 +112,15 @@ Follow [the link to this page](./Programming.md) to learn how to use 1.5MB cartr
 
 [1000+ games in cartridge format](https://mega.nz/file/zJJCgahb#oxERnzEHLNnP3jeOzDfmT6eF4zcTy8p313bP3_G-g4w), mainly to be used with joysticks  
 
+## About me
+
+You can find me on [Discord](https://discord.gg/ZXy3TZMSrj)  
+My Youtube channel [https://www.youtube.com/@RodrikStudio](https://www.youtube.com/@RodrikStudio)  
+
+Ridrok Studio  
+
 ## Greetings
 
 Many thanks to Edouard BERGE for his [RASM compiler](https://github.com/EdouardBERGE/rasm) I used to make the CPC roms and also for his big help with the selection cartridge.  
-
 Many thanks to BDCiron who is working on an alternative selection cartridge using ASIC acceleration, this firmware will be released in the future.  
-
 Many thanks to FreddyV (the creator of the [PicoMEM](https://github.com/FreddyVRetro/ISA-PicoMEM)) for the help with Pico power supply, for components selection and BOM creation for the PicoGX.  
