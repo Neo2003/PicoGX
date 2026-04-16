@@ -117,7 +117,7 @@ Follow [the link to this page](./Programming.md) to learn how to use 1.5MB cartr
 You can find me on [Discord](https://discord.gg/ZXy3TZMSrj)  
 My Youtube channel [https://www.youtube.com/@RodrikStudio](https://www.youtube.com/@RodrikStudio)  
 
-Ridrok Studio  
+Rodrik Studio  
 
 ## Greetings
 
