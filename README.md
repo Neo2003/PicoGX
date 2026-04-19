@@ -5,7 +5,7 @@
 The PicoGX is a cartridge for Amstrad Plus (464+ and 6128+) and GX4000 console loading cartridges from a MicroSD card.  
 Featuring the same package form factor and size as original cartridges, it fits perfectly in the above-mentioned machines.
 
-![plot](./Pictures/TheCartridge.jpg)
+![plot](./Pictures/TheCartridge.jpg)  
 
 ## Functionalities
 
@@ -18,7 +18,7 @@ Featuring the same package form factor and size as original cartridges, it fits 
 + Supports future games/demos up to 1.5Mb in size  
 + Supports save and restore scrores or achievements or other things  
 
-Firmware 1.0.6 brings improvements to the interface, check the release change-log.  
+Firmware 1.0.7 brings improvements to the interface, check the release change-log.  
 
 ## Connectivity
 
@@ -40,9 +40,13 @@ The sticker is profesionnally made of vinyl.
 In UK: [FlameLily shop](https://shop.flamelily.co.uk/picogx) covers the UK  
 In France: The shop is not ready yet to sell it and will cover Europe  
 
-## Updating the firmware
+## Firmware
 
 Firmware is evolving based on users feedback. The firmware version is displayed on top right of the CPC screen, you can compare with the latest release, check the "Releases" on the right of this page.  
+**It's recommanded to update to release 1.1.0.** It's a major release that changes the way it works internaly to brings stability improvement.  
+
+## Updating the firmware
+
 To update the PicoGX firmware, get the latest .uf2 file, connect the USB-C port of the pico with a cable, push the button hidden 5mm under the hole and keep it pushed while you plug the other end of the cable to a PC.  
 Then release the button when the PC makes a mounting sound. A USB disk drive called "RP2350" will mount. Drag & drop the .uf2 file in this folder. 
 When flash is complete (it will take ~2 seconds), the folder disappears.  
