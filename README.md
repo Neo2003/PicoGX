@@ -38,7 +38,7 @@ The sticker is profesionnally made of vinyl.
 ## Where to buy it
 
 In UK: [FlameLily shop](https://shop.flamelily.co.uk/picogx) covers the UK  
-In France: The shop is not ready yet to sell it and will cover Europe  
+In France: [MicroMiga](https://www.micromiga.com/produit/picogx-cartouche-pour-amstrad-plus-et-gx4000/) covers Europe  
 
 ## Firmware
 
