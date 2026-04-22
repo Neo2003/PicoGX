@@ -43,7 +43,7 @@ In France: [MicroMiga](https://www.micromiga.com/produit/picogx-cartouche-pour-a
 ## Firmware
 
 Firmware is evolving based on users feedback. The firmware version is displayed on top right of the CPC screen, you can compare with the latest release, check the "Releases" on the right of this page.  
-**It's recommanded to update to release 1.1.0.** It's a major release that changes the way it works internaly to brings stability improvement.  
+**It's recommanded to update to release 1.1.1.** It's a major release that changes the way it works internaly to brings stability improvement and optimizations.  
 
 ## Updating the firmware
 
