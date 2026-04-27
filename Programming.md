@@ -101,8 +101,8 @@ Bank 0 must be activated for this to work, and all this code must run from the A
 	ld a,(Contact_Addr2)
 	ld a,(bc) ; command
 
-Then any read to bank 0 will act as a write to the save. The write is sequencial and starts from the beginning of the save.  
-This code for exemple will write 0x25, 0x25, 0x25, x025, 0xAA in the save file.  
+Then any read to bank 0 (any address < 0x4000) will act as a write to the save. The write is sequencial and starts from the beginning of the save.  
+This code for exemple will write 0x25, 0x25, 0x25, x025, 0x30, 0x30, 0xAA in the save file.  
 
 	ld bc,#25
 	ld a,(bc) ; save it
@@ -111,6 +111,10 @@ This code for exemple will write 0x25, 0x25, 0x25, x025, 0xAA in the save file.
 	ld bc,#25
 	ld a,(bc) ; save it
 	ld bc,#25
+	ld a,(bc) ; save it
+	ld bc,#30
+	ld a,(bc) ; save it
+	ld bc,#1230 ; the high part of the address is ignored
 	ld a,(bc) ; save it
 	ld bc,#AA
 	ld a,(bc) ; save it
@@ -136,6 +140,7 @@ Open the save as read:
 	ld a,(bc) ; command
 
 The Bank 0 is hidden and the content of the save is presented instead.  
+So any read < 0x4000 will return the save content until the stop command is sent  
 This code will read byte located at the address 0x258 of the save:  
 
 	ld lh,#258
