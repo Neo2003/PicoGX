@@ -129,6 +129,32 @@ To  stop the save and have back the content of Bank 0, run this stop command:
 ![plot](./Pictures/Warning.jpg) Each time the save is open for write, it restarts at the beginning.  
 As soon as the write is ended by the `stop` command, the content will be saved to the SD card.  
 
+Exemple saving the default screen memory (0xC000 - 0xFFFF) in the save  
+
+		Contact_Addr1 equ #133C
+		Contact_Addr1 equ #25C4
+		picoread  equ 5
+		picowrite equ 6
+		picostop  equ 7
+
+		ld a,(Contact_Addr1)
+		ld a,(Contact_Addr2)
+		ld a,(picowrite) ; command
+		
+		ld hl,#C000
+		ld de,#4000
+		ld b,0
+	.save_loop
+		ld c,(hl) ; read a byte in screen memory
+		ld a,(bc) ; save it
+		inc hl    ; next byte
+		dec de    ; decrement the counter
+		ld a,d : or e : jr nz,.save_loop
+
+		ld a,(Contact_Addr1)
+		ld a,(Contact_Addr2)
+		ld a,(picostop) ; command
+
 ### Reading the save
 
 Read access is simplier and provides random access to the save.   
