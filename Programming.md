@@ -92,6 +92,7 @@ If the save stays unused, it will not been saved on the SD card. It is saved whe
 
 To access this memory for write, the PicoGX sequence is required, then you send the commande `write`.  
 Bank 0 must be activated for this to work, and all this code must run from the Amstrad memory  
+Whatever Bank 0 is mapped to 0x0000, 0x4000 or 0x8000 this will work, addresses must be in the correct range.  
 
     Contact_Addr1 	EQU #133C
     Contact_Addr2 	EQU #25C4
@@ -101,8 +102,8 @@ Bank 0 must be activated for this to work, and all this code must run from the A
 	ld a,(Contact_Addr2)
 	ld a,(bc) ; command
 
-Then any read to bank 0 (any address < 0x4000) will act as a write to the save. The write is sequencial and starts from the beginning of the save.  
-This code for exemple will write 0x25, 0x25, 0x25, x025, 0x30, 0x30, 0xAA in the save file.  
+Then any read from bank 0 (address depend on where it is mapped) will act as a write to the save. The write is sequencial and starts from the beginning of the save.  
+This code for exemple will write 0x25, 0x25, 0x25, x025, 0x30, 0x30, 0xAA in the save file (bank 0 is mapped at 0x0000 in this exemple so all addresses must be between 0x0000 and 0x3FFF).  
 
 	ld bc,#25
 	ld a,(bc) ; save it
@@ -129,7 +130,7 @@ To  stop the save and have back the content of Bank 0, run this stop command:
 ![plot](./Pictures/Warning.jpg) Each time the save is open for write, it restarts at the beginning.  
 As soon as the write is ended by the `stop` command, the content will be saved to the SD card.  
 
-Exemple saving the default screen memory (0xC000 - 0xFFFF) in the save  
+Exemple saving the default screen memory (0xC000 - 0xFFFF) in the save with bank 0 mapped at 0x0000  
 
 		Contact_Addr1 equ #133C
 		Contact_Addr1 equ #25C4
@@ -143,7 +144,7 @@ Exemple saving the default screen memory (0xC000 - 0xFFFF) in the save
 		
 		ld hl,#C000
 		ld de,#4000
-		ld b,0
+		ld b,0	; if bank 0 is mapped at 0x4000 for exemple, set b to #40
 	.save_loop
 		ld c,(hl) ; read a byte in screen memory
 		ld a,(bc) ; save it
@@ -166,7 +167,8 @@ Open the save as read:
 	ld a,(bc) ; command
 
 The Bank 0 is hidden and the content of the save is presented instead.  
-So any read < 0x4000 will return the save content until the stop command is sent  
+Whatever Bank 0 is mapped to 0x0000, 0x4000 or 0x8000 this will work.  
+So any read in this area will return the save content until the stop command is sent.  
 This code will read byte located at the address 0x258 of the save:  
 
 	ld lh,#258
