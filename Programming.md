@@ -179,3 +179,23 @@ To stop reading and get back Bank 0, it's the same command as for write:
 	ld a,(Contact_Addr2)
 	ld a,(bc) ; command
 
+Exemple reading the save to the screen memory  
+
+	Contact_Addr1 equ #133C
+	Contact_Addr1 equ #25C4
+	picoread  equ 5
+	picowrite equ 6
+	picostop  equ 7
+
+	ld a,(Contact_Addr1)
+	ld a,(Contact_Addr2)
+	ld a,(picoread) ; command
+
+	ld hl,#0000	; Location of the save
+	ld de,#C000	; Destination in screen memory
+	ld bc,#4000	; Size
+	ldir
+
+	ld a,(Contact_Addr1)
+	ld a,(Contact_Addr2)
+	ld a,(picostop) ; command
