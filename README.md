@@ -114,7 +114,8 @@ Follow [the link to this page](./Programming.md) to learn how to use 1.5MB cartr
 
 ## Games
 
-[1000+ games in cartridge format](https://mega.nz/file/zJJCgahb#oxERnzEHLNnP3jeOzDfmT6eF4zcTy8p313bP3_G-g4w), mainly to be used with joysticks  
+[1000+ games in cartridge format](https://www.cpcwiki.eu/index.php/Converted_GX4000_Software), mainly to be used with joysticks  
+Click on the red M in the "Full set" section to download the lastest archive.  
 
 ## About me
 
