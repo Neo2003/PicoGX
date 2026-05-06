@@ -94,10 +94,10 @@ To access this memory for write, the PicoGX sequence is required, then you send 
 Bank 0 must be activated for this to work, and all this code must run from the Amstrad memory  
 Whatever Bank 0 is mapped to 0x0000, 0x4000 or 0x8000 this will work, addresses must be in the correct range.  
 
-    Contact_Addr1 	EQU #133C
-    Contact_Addr2 	EQU #25C4
+    Contact_Addr1 	EQU #133C ; if bank 0 is mapped at 0x4000 add #4000 => #533C
+    Contact_Addr2 	EQU #25C4 ; if bank 0 is mapped at 0x4000 add #4000 => #65C4
 
-    ld bc,6 ; write
+    ld bc,6 ; write ; if bank 0 is mapped at 0x4000 add #4000 => #4006
 	ld a,(Contact_Addr1)
 	ld a,(Contact_Addr2)
 	ld a,(bc) ; command
@@ -105,24 +105,25 @@ Whatever Bank 0 is mapped to 0x0000, 0x4000 or 0x8000 this will work, addresses 
 Then any read from bank 0 (address depend on where it is mapped) will act as a write to the save. The write is sequencial and starts from the beginning of the save.  
 This code for exemple will write 0x25, 0x25, 0x25, x025, 0x30, 0x30, 0xAA in the save file (bank 0 is mapped at 0x0000 in this exemple so all addresses must be between 0x0000 and 0x3FFF).  
 
-	ld bc,#25
+²	ld b,#0 ; if bank 0 is mapped at 0x4000, set b to #40
+	ld c,#25
 	ld a,(bc) ; save it
-	ld bc,#25
+	ld c,#25
 	ld a,(bc) ; save it
-	ld bc,#25
+	ld c,#25
 	ld a,(bc) ; save it
-	ld bc,#25
+	ld c,#25
 	ld a,(bc) ; save it
-	ld bc,#30
+	ld c,#30
 	ld a,(bc) ; save it
-	ld bc,#1230 ; the high part of the address is ignored
+	ld c,#1230 ; the high part of the address is ignored
 	ld a,(bc) ; save it
-	ld bc,#AA
+	ld c,#AA
 	ld a,(bc) ; save it
 
 To  stop the save and have back the content of Bank 0, run this stop command:  
 
-	ld bc,7 ; stop
+	ld bc,7 ; stop ; if bank 0 is mapped at 0x4000 add #4000 => #4007
 	ld a,(Contact_Addr1)
 	ld a,(Contact_Addr2)
 	ld a,(bc) ; command
@@ -132,11 +133,11 @@ As soon as the write is ended by the `stop` command, the content will be saved t
 
 Exemple saving the default screen memory (0xC000 - 0xFFFF) in the save with bank 0 mapped at 0x0000  
 
-		Contact_Addr1 equ #133C
-		Contact_Addr1 equ #25C4
-		picoread  equ 5
-		picowrite equ 6
-		picostop  equ 7
+		Contact_Addr1 equ #133C ; if bank 0 is mapped at 0x4000 add #4000 => #533C
+		Contact_Addr1 equ #25C4 ; if bank 0 is mapped at 0x4000 add #4000 => #65C4
+		picoread  equ 5 ; if bank 0 is mapped at 0x4000 add #4000 => #4005
+		picowrite equ 6 ; if bank 0 is mapped at 0x4000 add #4000 => #4006
+		picostop  equ 7 ; if bank 0 is mapped at 0x4000 add #4000 => #4007
 
 		ld a,(Contact_Addr1)
 		ld a,(Contact_Addr2)
@@ -144,7 +145,7 @@ Exemple saving the default screen memory (0xC000 - 0xFFFF) in the save with bank
 		
 		ld hl,#C000
 		ld de,#4000
-		ld b,0	; if bank 0 is mapped at 0x4000 for exemple, set b to #40
+		ld b,0	; if bank 0 is mapped at 0x4000, set b to #40
 	.save_loop
 		ld c,(hl) ; read a byte in screen memory
 		ld a,(bc) ; save it
