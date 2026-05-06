@@ -77,7 +77,7 @@ All this is written on the bottom of the screen.
 
 With firmware 1.0.4 and above, the selection menu colors can be changed.  
 To do this, create a file named `PicoGX.cfg` on the root of the SD card.  
-Put the following content:  
+Put the following content for firmware up to 1.1.1:  
 
     # Here you can set the color used in the selection screen
     # It's either #nn using hexadecimal value from the table noted INKR and bold
@@ -87,6 +87,20 @@ Put the following content:
     Text=26
 
 With firmware 1.0.5, now supports Windows file ending and missing last return.  
+
+![plot](./Pictures/Warning.jpg) Names for colors for selection menu have changed in firmware 1.1.2 to add colors for loading screen.  
+Firmware 1.1.2 can now also change colors for loading screen:  
+
+    # Here you can set the color used in the selection screen and loading screen
+    # It's either #nn using hexadecimal value from the table noted INKR and bold
+    # Or use the CPC color code from the BASIC. It goes from 0 to 26 in decimal form and is the BASIC column in the table
+    [Color]
+    MenuBackground=#54
+    MenuText=26
+
+    LoadBackground=#4B
+    LoadText=#55
+    LoadProgress=#46
 
 Lines beginning with `#` are comments and ignored by the PicoGX.  
 Check this <a href="https://neo2003.github.io/PicoGX/ColorTable.html" target="_blank">Color Code page</a> to know which values to put for colors.  
