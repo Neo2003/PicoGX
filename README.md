@@ -108,6 +108,16 @@ The PicoGX will recognize INKR values prefixed with a `#`, this is an hexadecima
 It will recognize a decimal number if no `#` is present and will accept values from 0 to 26 which are Amstrad BASIC color numbers.   
 Note that colors won't be applied if both colors are same, even if one is written with INKR value and the other one with BASIC color number.  
 
+## Displaying game information
+
+With firmware 1.1.3, the PigoGX has hability to display some texts.  
+Do do so, create a text file (.txt) with the same name as the cpr/bin file next to it.  
+
+The menu will now display a small icon next to the cartridge name and will display the content of the text if you press the pause button on GX4000 or P key on a 6128 Plus or 464 Plus.   
+
+![plot](./Pictures/TextDisplay.jpg)  
+The text is removed as soon as you move the joystick or if you press Pause/P again. You can also press the Fire 1 button or press enter to start the game.  
+
 ## Some custom cartridges
 
 I made few cartridges  
