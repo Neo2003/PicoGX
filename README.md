@@ -17,8 +17,9 @@ Featuring the same package form factor and size as original cartridges, it fits 
 + When connected with the USB-C port to a PC, act as an adapter and mount the SD as disk  
 + Supports future games/demos up to 1.5Mb in size  
 + Supports save and restore scrores or achievements or other things  
++ Supports CPR, BIN, DSK and CRO files  
 
-Firmware 1.0.7 brings improvements to the interface, check the release change-log.  
+Be sure to use firmware 1.1.5 at least for CPR and BIN and 1.2.0 for added DSK and CRO.  
 
 ## Connectivity
 
