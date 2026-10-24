@@ -35,6 +35,11 @@ The PCB is based on a Raspberry Pi Pico 2 model RP2354B and is using ENIG surfac
 The box is printed in automotive LEDO 6060 resin.  
 The sticker is profesionnally made of vinyl.  
 
+## Latest changes - Hardware 1.1
+
+Both distributors now sell the version 1.1 of the hardware since mid July 2026.  
+This new hardware brings only internal changes and the Acid security ship is now emulated.  
+
 ## Where to buy it
 
 In UK: [FlameLily shop](https://shop.flamelily.co.uk/picogx) covers the UK  
@@ -43,7 +48,17 @@ In France: [MicroMiga](https://www.micromiga.com/produit/picogx-cartouche-pour-a
 ## Firmware
 
 Firmware is evolving based on users feedback. The firmware version is displayed on top right of the CPC screen, you can compare with the latest release, check the "Releases" on the right of this page.  
-**It's recommanded to update to release 1.1.1.** It's a major release that changes the way it works internaly to brings stability improvement and optimizations.  
+**It's recommanded to update to release 1.1.1 minimum.** It's a major release that changes the way it works internaly to brings stability improvement and optimizations.  
+
+### Firmware 1.1.5
+For those who did modify their CPC+ or GX4000 to add a reset button, firmware 1.1.5 for the hardware 1.1 now detects this event and reloads the selection menu instead of the last game.  
+Firmware 1.1.5 also works on hardware 1.0 but with no change in behavior, it cannot detect the reset event so still relaunches the last game.  
+
+### Firmware 1.2.0
+Big changes in this firmware, Code reorganized to accomodate many more functions.
+Add support:  
+- DSK files support  
+- CRO cartridge support up to 512kb  
 
 ## Updating the firmware
 
