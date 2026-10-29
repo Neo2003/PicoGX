@@ -56,10 +56,14 @@ For those who did modify their CPC+ or GX4000 to add a reset button, firmware 1.
 Firmware 1.1.5 also works on hardware 1.0 but with no change in behavior, it cannot detect the reset event so still relaunches the last game.  
 
 ### Firmware 1.2.0
-Big changes in this firmware, Code reorganized to accomodate many more functions.
+Big changes in this firmware, Code reorganized to accomodate many more functions.  
 Add support:  
 - DSK files support  
 - CRO cartridge support up to 512kb  
+
+### Firmware 1.2.1
+Add support:  
+- PicoCPC compatibility  
 
 ## Updating the firmware
 
@@ -140,8 +144,10 @@ I made few cartridges
 + [Basic 1.1 f3 French](https://neo2003.github.io/PicoGX/Cartridges/Basic%206128%20Fr.cpr) from CPC 6128  
 + [Basic 1.1 f3 French Pipe](https://neo2003.github.io/PicoGX/Cartridges/Basic%206128%20Fr%20Pipe.cpr) from CPC 6128 and modified to have pipe at proper place and inactive ù    
 + [Basic 1.1 v3 English](https://neo2003.github.io/PicoGX/Cartridges/Basic%206128%20En.cpr) from CPC 6128  
++ [Basic 1.1 s3 Spanish](https://neo2003.github.io/PicoGX/Cartridges/Basic%206128%20Es.cpr) from CPC 6128  
 + [Basic 1.1 f4 French](https://neo2003.github.io/PicoGX/Cartridges/Basic%20Plus%20Fr.cpr) from "Burnin'Rubber + Basic" cartridge  
 + [Basic 1.1 v4 English](https://neo2003.github.io/PicoGX/Cartridges/Basic%20Plus%20En.cpr) from "Burnin'Rubber + Basic" cartridge  
++ [Basic 1.1 s4 spanish](https://neo2003.github.io/PicoGX/Cartridges/Basic%20Plus%20Es.cpr) from "Burnin'Rubber + Basic" cartridge  
 
 Basic from 6128 works only with 6128 Plus, **will not work** with 464 Plus or GX4000 due to the missing floppy controler.  
 Basic from Plus works with all, but is useless on GX4000. Burnin' Rubber and menu were removed  
