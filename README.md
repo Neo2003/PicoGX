@@ -65,6 +65,10 @@ Add support:
 Add support:  
 - PicoCPC compatibility  
 
+### Firmware 1.2.2
+Add support:
+- XPR cartridge support up to 1.5Mo with NBBK of value 32 only  
+
 ## Updating the firmware
 
 To update the PicoGX firmware, get the latest .uf2 file, connect the USB-C port of the pico with a cable, push the button hidden 5mm under the hole and keep it pushed while you plug the other end of the cable to a PC.  
